@@ -20,12 +20,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IdentityDataAccesLayer\IdentityDataAccesLayer.csproj" />
+    <ProjectReference Include="..\IdentityDtoLayer\IdentityDtoLayer.csproj" />
     <ProjectReference Include="..\IdentityEntities\IdentityEntities.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="ValidationRules\AppRoleValidationRules\" />
-    <Folder Include="ValidationRules\AppUserValidationRules\" />
     <Folder Include="ValidationRules\CustomerAccountProcessValidationRules\" />
     <Folder Include="ValidationRules\CustomerAccountValidationRules\" />
   </ItemGroup>
