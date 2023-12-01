@@ -17,4 +17,10 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\IdentityBussines\IdentityBussines.csproj" />
+    <ProjectReference Include="..\IdentityDataAccesLayer\IdentityDataAccesLayer.csproj" />
+    <ProjectReference Include="..\IdentityEntities\IdentityEntities.csproj" />
+  </ItemGroup>
+
 </Project>
