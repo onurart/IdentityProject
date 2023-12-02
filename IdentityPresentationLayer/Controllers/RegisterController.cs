@@ -30,6 +30,13 @@ namespace IdentityPresentationLayer.Controllers
                 {
                     return RedirectToAction("Index", "ConfirMail");
                 }
+                else
+                {
+                    foreach (var item in result.Errors)
+                    {
+                        ModelState.AddModelError("0", item.Description);
+                    }
+                }
             }
             return View();
 
