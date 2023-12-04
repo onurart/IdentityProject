@@ -26,5 +26,20 @@ namespace IdentityDataAccesLayer.Concrete
         public DbSet<CustomerAccount> CustomerAccount { get; set; }
         public DbSet<CustomerAccountProcess> AccountProcesses { get; set; }
 
-    }
+		protected override void OnModelCreating(ModelBuilder builder)
+		{
+            builder.Entity<CustomerAccountProcess>()
+               .HasOne(x=>x.SenderCustomer)
+               .WithMany(x=>x.CustomerReceivere)
+               .HasForeignKey(x=>x.SenderID)
+               .OnDelete(DeleteBehavior.ClientSetNull);
+
+            builder.Entity<CustomerAccountProcess>()
+                .HasOne(x => x.ReceiverCustomer)
+                .WithMany(x => x.CustomerReceivere)
+                .HasForeignKey(x => x.ReceiverID)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+            base.OnModelCreating(builder);
+		}
+	}
 }

@@ -14,6 +14,7 @@ namespace IdentityEntities.Concrete
         public string Disrtict { get; set; }
         public string City { get; set; }
         public string ImagesUrl { get; set; }
+        public int ConfirmCode { get; set; }
         public List<CustomerAccount> CustomerAccount { get; set; }
     }
 }
